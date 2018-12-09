@@ -18,12 +18,6 @@ public class ExampleSynchronized {
         }
     }
 
-
-
-
-
-
-
     /*
      * модификатор valotile не подходит потому что counter не атомарная операция
      *
