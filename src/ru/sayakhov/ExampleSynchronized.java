@@ -8,9 +8,21 @@ public class ExampleSynchronized {
         test.doWork();
     }
 
-    private synchronized void increment() {
-        counter++; // не атомарная операция - состоит из 3 частей (counter = counter + 1 ; считываение предыдущего значения counter, +1, и присвоение)
+//    private synchronized void increment() {
+//        counter++; // не атомарная операция - состоит из 3 частей (counter = counter + 1 ; считываение предыдущего значения counter, +1, и присвоение)
+//    }
+
+    private void increment() {
+        synchronized(this){
+            counter++; // не атомарная операция - состоит из 3 частей (counter = counter + 1 ; считываение предыдущего значения counter, +1, и присвоение)
+        }
     }
+
+
+
+
+
+
 
     /*
      * модификатор valotile не подходит потому что counter не атомарная операция
