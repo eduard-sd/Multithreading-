@@ -9,7 +9,6 @@ public class ExampleProducerConcumer {
 
     public static void main(String[] args) {
         Thread thread1 = new Thread(new Runnable(){
-
             @Override
             public void run() {
                 try {
@@ -19,8 +18,8 @@ public class ExampleProducerConcumer {
                 }
             }
         });
-        Thread thread2 = new Thread(new Runnable(){
 
+        Thread thread2 = new Thread(new Runnable(){
             @Override
             public void run() {
                 try {
